@@ -1,30 +1,4 @@
 <h1 id="en">EN</h1>
-<style>
-    .logo-picture{
-        width: 70%;
-        border-radius: 10px;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-        transition: all 1s ease;
-    }
-    .logo-picture:hover{
-        transform: translateY(-10px) scale(1.1);
-        box-shadow:  0 0 10px 5px purple,
-                     5px 6px 10px pink;
-    }
-    .picture-box{
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        justify-items: center;
-        flex-wrap: wrap;
-    }
-    .picture-box .picture-style{
-        border-radius: 8px;  
-        object-fit: cover;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-    }
-</style>
 
 <img class="logo-picture" src="/github-picture/logo/logo.png" alt="logo">
 
@@ -144,32 +118,6 @@ int main () {
 
 
 <h1 id="ru-RU">ru-RU</h1>
-<style>
-    .logo-picture{
-        width: 70%;
-        border-radius: 10px;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-        transition: all 1s ease;
-    }
-    .logo-picture:hover{
-        transform: translateY(-10px) scale(1.1);
-        box-shadow:  0 0 10px 5px purple,
-                     5px 6px 10px pink;
-    }
-    .picture-box{
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        justify-items: center;
-        flex-wrap: wrap;
-    }
-    .picture-box .picture-style{
-        border-radius: 8px;  
-        object-fit: cover;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-    }
-</style>
 
 <img class="logo-picture" src="/github-picture/logo/logo.png" alt="logo">
 
@@ -291,20 +239,6 @@ int main () {
 
 # Visual BeautifUL UI Freamwork 2026 Rebirth edition _ KwzDeve 
 
-<style>
-    .logo-picture{
-        width: 70%;
-        border-radius: 10px;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-        transition: all 1s ease;
-    }
-    .logo-picture:hover{
-        transform: translateY(-10px) scale(1.1);
-        box-shadow:  0 0 10px 5px purple,
-                     5px 6px 10px pink;
-    }
-</style>
-
 <img class="logo-pictuer" src="/github-picture/logo/logo.png" alt="logo">
 
 <h3>多语言 / Languages </h3>
@@ -378,23 +312,6 @@ int main () {
 <p>
     目前支持较少 等待完善吧! 如果想加入完善开发或者维护 可以联系 xingxixi335@gmail.com 这是我的邮箱或者直接提交请求这都是最大的贡献我做的可能不是很好希望可以更多开源大佬指点帮助我完成注释
 </p>
-
-<style>
-    .picture-box{
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        justify-items: center;
-        flex-wrap: wrap;
-    }
-
-    .picture-box .picture-style{
-        border-radius: 8px;  
-        object-fit: cover;
-        box-shadow: 0 0 6px 2px #bcb6b611;
-    }
-</style>
 
 <h3>下面是我开发时候的截图只能说耗时比较久的</h3>
 <div class="picture-box">
