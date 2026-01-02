@@ -1,4 +1,31 @@
 <h1 id="en">EN</h1>
+<style>
+    .logo-picture{
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 0 6px 2px #bcb6b611;
+        transition: all 1s ease;
+    }
+    .logo-picture:hover{
+        transform: translateY(-10px) scale(1.1);
+        box-shadow:  0 0 10px 5px purple,
+                     5px 6px 10px pink;
+    }
+    .picture-box{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+    .picture-box .picture-style{
+        border-radius: 8px;  
+        object-fit: cover;
+        box-shadow: 0 0 6px 2px #bcb6b611;
+    }
+</style>
+
 <img class="logo-picture" src="/github-picture/logo/logo.png" alt="logo">
 
 <h3>Languages / 多语言</h3>

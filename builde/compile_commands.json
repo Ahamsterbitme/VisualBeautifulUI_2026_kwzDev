@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde",
+  "command": "/usr/bin/c++  -I/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/src -isystem /usr/include/gtkmm-4.0 -isystem /usr/lib/gtkmm-4.0/include -isystem /usr/include/pangomm-2.48 -isystem /usr/lib/pangomm-2.48/include -isystem /usr/include/giomm-2.68 -isystem /usr/lib/giomm-2.68/include -isystem /usr/include/glibmm-2.68 -isystem /usr/lib/glibmm-2.68/include -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/cairomm-1.16 -isystem /usr/lib/cairomm-1.16/include -isystem /usr/include/sigc++-3.0 -isystem /usr/lib/sigc++-3.0/include -isystem /usr/include/gtk-4.0/unix-print -isystem /usr/include/gtk-4.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/fribidi -isystem /usr/include/harfbuzz -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/glycin-2 -isystem /usr/include/cairo -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/pixman-1 -isystem /usr/include/graphene-1.0 -isystem /usr/lib/graphene-1.0/include -isystem /usr/include/glib-2.0 -isystem /usr/lib/glib-2.0/include -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/sysprof-6 -std=c++17 -Wall -Wextra -Wpedantic -Werror -mfpmath=sse -msse -msse2 -pthread -O3 -DNDEBUG -o CMakeFiles/VisualBeautifUI_2026_kwzDev.dir/test/main.cpp.o -c /home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/test/main.cpp",
+  "file": "/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/test/main.cpp",
+  "output": "CMakeFiles/VisualBeautifUI_2026_kwzDev.dir/test/main.cpp.o"
+}
+]

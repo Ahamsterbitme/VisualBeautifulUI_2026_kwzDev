@@ -1,0 +1,9 @@
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/VisualBeautifUI_2026_kwzDev.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/package.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/package_source.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/edit_cache.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/rebuild_cache.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/list_install_components.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/install.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/install/local.dir
+/home/hacker/C++Project/VisualBeautifUI_2026_kwzDev/builde/CMakeFiles/install/strip.dir
