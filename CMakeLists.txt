@@ -27,6 +27,7 @@ add_executable(${PROJECT_NAME}
     ../src/LayoutComponentController/LayoutBlockComponentController.h
     ../src/LayoutComponentController/LayoutFlexComponentController.h
     ../src/ButtonComponentController/Button.h
+    ../src/TextComponent/ReactiveText.h
     ../src/TextComponent/HtmlText.h
     ../src/TextComponent/Text.h
 )

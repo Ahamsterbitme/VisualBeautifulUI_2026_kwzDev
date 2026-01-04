@@ -1,12 +1,16 @@
+#define MAKE_COMPONENT(type , name)\
+    static auto _##name##_ptr = std::make_shared<type>();\
+    auto& name = *_##name##_ptr;\
+    auto name##Ptr = _##name##_ptr;
+#include <gtkmm/application.h>
 #include "glibmm/refptr.h"
 #include "gtkmm/object.h"
 #include "gtkmm/widget.h"
 #include "gtkmm/window.h"
 #include <iostream>
 #include <functional>
-#include <gtkmm/application.h>
 #include <string>
-
+#include <vector>
 namespace VisualUI {
     //this user assets file path
     class assets_path {
@@ -17,6 +21,14 @@ namespace VisualUI {
         static inline std::string audioPath = rootPath + "/audio/";
         static inline std::string stylePath = rootPath + "/css/";
     };
+
+    inline std::vector<Gtk::Widget*> ElementsLists (const std::vector<Gtk::Widget*> WidgetList){
+        if (WidgetList.empty()){
+            throw "this widget the empty!";
+        }
+        return WidgetList;
+    }
+
     class Application{
         private:
         std::string appName;
@@ -36,14 +48,14 @@ namespace VisualUI {
             /**
             @param _AppName your app name
             */
-            Application& SettingAppName (const std::string& _AppName){
+            Application& SetAppName (const std::string& _AppName){
                 appName = _AppName;
                 return *this;
             }
             /**
             @param _AppID your app id
             */
-            Application& SettingAppID (const std::string& _AppId){
+            Application& SetAppID (const std::string& _AppId){
                 appID = _AppId;
                 UserAPP = Gtk::Application::create(appID);
                 return *this;
@@ -52,7 +64,7 @@ namespace VisualUI {
             @param tl your app title
             */
             template<typename title>
-            Application& SettingAppTitle (const title& tl) {
+            Application& SetAppTitle (const title& tl) {
                 const std::string title_ = std::string(tl);
                 Window_title = title_;
                 return *this;
@@ -60,7 +72,7 @@ namespace VisualUI {
             /**
             @param _className your css class name
             */
-            Application& SettingWindowStyleName (const std::string& _StyleName){
+            Application& SetWindowStyleName (const std::string& _StyleName){
                 Window_class = _StyleName;
                 return *this;
             }
@@ -68,7 +80,7 @@ namespace VisualUI {
             @param _width settings your window width
             @param _height settings your window height
             */
-            Application& SettingWindowSize (const int& _width , 
+            Application& SetWindowSize (const int& _width , 
                 const int& _height){
                 window_width = _width;
                 window_height = _height;

@@ -97,21 +97,21 @@ namespace VisualUI {
             /**
             @param LabelName settings your Html Label
             */
-            HtmlText& SettingHtmlLabel (const std::string&& Labelname){
+            HtmlText& SetHtmlLabel (const std::string&& Labelname){
                 _htmlLabel = std::move(Labelname);
                 return *this;
             }
             /**
             @param HtmlData this settings your text
             */
-            HtmlText& SettingText (const std::string&& HtmlData){
+            HtmlText& SetText (const std::string&& HtmlData){
                 _htmlText = std::move(HtmlData);
                 return *this;
             }
             /**
             @param TextColor this settings your TextColor
             */
-            HtmlText& SettingTextColor(const HtmlTextColor& TextColor){
+            HtmlText& SetTextColor(const HtmlTextColor& TextColor){
                 switch (TextColor) {
                     case COLOR_DEFAULT:
                         _color = "";
@@ -235,7 +235,7 @@ namespace VisualUI {
             /**
             @param TextSize this settings your text size
             */
-            HtmlText& SettingTextSize(const HtmlTextSize& TextSize){
+            HtmlText& SetTextSize(const HtmlTextSize& TextSize){
                 switch (TextSize) {
                     case TEXT_SIZE_XX_SMALL:
                         _size = "xx-small";
@@ -265,9 +265,9 @@ namespace VisualUI {
                 return *this;
             }
             /**
-            @param FontFamily this settings your font styles
+            @param SetFontFamily this settings your font styles
             */
-            HtmlText& SettingFontFamily(const HtmlTextFontFamily& FontFamily){
+            HtmlText& SetFontFamily(const HtmlTextFontFamily& FontFamily){
                 switch (FontFamily) {
                     case FONT_FAMILY_SERIF:
                         _famity = "serif";
@@ -295,9 +295,9 @@ namespace VisualUI {
                 return *this;
             }
             /**
-            @param FontWeight settings your font weight
+            @param SettingFontWeight settings your font weight
             */
-            HtmlText& SettingFontWeight(const HtmlFontWeight&& FontWeight){
+            HtmlText& SetFontWeight(const HtmlFontWeight&& FontWeight){
                 switch (FontWeight) {
                     case TEXT_WEIGHT_THIN:
                         _wight = "thin";

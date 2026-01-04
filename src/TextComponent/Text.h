@@ -19,14 +19,14 @@ namespace VisualUI {
             /**
             @param text this settings your text data
             */
-            StaticComponentText& SettingText(const std::string&& text){
+            StaticComponentText& SetText(const std::string&& text){
                 _text = std::move(std::make_shared<std::string>(text));
                 return *this;   
             }
             /**
             @param textStyleName this settings your text class name 
             */
-            StaticComponentText& SettingStyleName(const std::string&& textStyleName){
+            StaticComponentText& SetStyleName(const std::string&& textStyleName){
                 _style = std::move(std::make_shared<std::string>(textStyleName));
                 return *this;
             }

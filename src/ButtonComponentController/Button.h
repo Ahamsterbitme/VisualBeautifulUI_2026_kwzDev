@@ -36,32 +36,32 @@ namespace VisualUI {
         _height(-1) , _margin(1) , _adaption_width(true),
         _adaption_height(true) , _align(1) , _click(false) {}
 
-        ButtonComponent& SettingButtonLabel(const std::string&& ButtonLabelText){
+        ButtonComponent& SetButtonLabel(const std::string&& ButtonLabelText){
             _buttonlabel = std::move(ButtonLabelText);
             return *this;
         }
 
-        ButtonComponent& SettingButtonStyle(const std::string&& ButtonStyle){
+        ButtonComponent& SetButtonStyle(const std::string&& ButtonStyle){
             _style = std::move(ButtonStyle);
             return *this;
         }
 
-        ButtonComponent& SettingButtonWidth(const int&& ButtonWidth){
+        ButtonComponent& SetButtonWidth(const int&& ButtonWidth){
             _width = std::move(ButtonWidth);
             return *this;
         }
 
-        ButtonComponent& SettingButtonHeight(const int&& ButtonHeight){
+        ButtonComponent& SetButtonHeight(const int&& ButtonHeight){
             _height = std::move(ButtonHeight);
             return *this;
         }
 
-        ButtonComponent& SettingButtonMargin(const int&& ButtonMargin){
+        ButtonComponent& SetButtonMargin(const int&& ButtonMargin){
             _margin = ButtonMargin;
             return *this;
         }
 
-        ButtonComponent& SettingButtonAdaption(const ButtonAdaptionWidth&& adaption_width,
+        ButtonComponent& SetButtonAdaption(const ButtonAdaptionWidth&& adaption_width,
             const ButtonAdaptionHeight&& adaption_height){
                 switch (adaption_width) {
                     case BUTTON_ADAPTION_WIDTH_TRUE:
@@ -89,7 +89,7 @@ namespace VisualUI {
             return *this;
         }
         
-        ButtonComponent& SettingButtonAlign(const ButtonAlign&& ButtonAlign){
+        ButtonComponent& SetButtonAlign(const ButtonAlign&& ButtonAlign){
             switch (ButtonAlign) {
                 case BUTTON_ALIGN_START:
                     _align = 1;
