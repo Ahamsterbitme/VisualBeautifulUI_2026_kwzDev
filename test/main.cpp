@@ -1,8 +1,11 @@
 #include "../src/LayoutComponentController/LayoutBlockComponentController.h"
 #include "../src/ApplicationController/Application.h"
 #include "../src/ButtonComponentController/Button.h"
+#include "../src/ImagesComponent/ImageComponent.h"
 #include "../src/TextComponent/ReactiveText.h"
-#include "../src/TextComponent/HtmlText.h"
+#include "../src/InputComponent/Input.h"
+#include "../src/utils/DelayExecutor.h"
+#include "../src/TextComponent/Text.h"
 #include "gtkmm/widget.h"
 
 using namespace std;
@@ -11,45 +14,67 @@ using namespace VisualUI;
 
 int main () {
     VisualUI::Application()
-        .SetAppID("myapp")
-        .SetAppName("myapp")
-        .SetAppTitle("hello world")
-        .SetWindowSize(600, 400)
+        .SetAppID("com.app.my")
+        .SetAppName("Input Test")
+        .SetAppTitle("Input Test")
+        .SetWindowStyleName("default-windows-css")
+        .SetWindowSize(700, 500)
         .CreateContent([]() -> Widget*{
-            BlockLayoutColumns blocklayout;
+            MAKE_COMPONENT(InputComponent, NewInput);
+            MAKE_COMPONENT(ButtonComponent, NewButton)
+            MAKE_COMPONENT(StaticComponentText, NewText);
+            MAKE_COMPONENT(BlockLayoutColumns, MainLayout);
             MAKE_COMPONENT(ReactiveComponentText, newReactiveText);
-            MAKE_COMPONENT(ButtonComponent, NewButton);
-            MAKE_COMPONENT(HtmlText, newHtmlText)
-            return blocklayout
-                .SetLayoutHeight(200)
-                .SetLayoutWidth(200)
+            MAKE_COMPONENT(Delaytool, newDelaytool);
+            MAKE_COMPONENT(ImageComponent, NewImages);
+            return MainLayout
+                .SetLayoutHeight(500)
+                .SetLayoutWidth(500)
+                .SetLayoutMargin(1)
+                .SetLayoutStyle("default-layout-css")
                 .CreateBlockLayout({
-                    newReactiveText
-                        .SetDefaultText("hello world")
-                        .SetStyleName("default-txt")
+                    NewText
+                        .SetText("input your name")
                         .addComponent(),
-                    newHtmlText
-                        .SetHtmlLabel("span")
-                        .SetTextColor(COLOR_WHITE)
-                        .SetText("Hai Developer!")
-                        .SetTextSize(TEXT_SIZE_MEDIUM)
-                        .SetFontWeight(TEXT_WEIGHT_BOLD)
-                        .SetFontFamily(FONT_JETBRAINS_MONO)
-                        .addComponent()
-                },[&newReactiveText , &NewButton]()->Gtk::Widget*{
+                        NewInput
+                            .SetInputAlign(INPUT_ALIGN_CENTER)
+                            .SetInputType(INPUT_TEXT)
+                            .addComponent(),
+                                newReactiveText
+                                    .SetDefaultText("click button sumibt your name")
+                                    .addComponent(),
+                                        NewImages
+                                            .SetImageWidth(100)
+                                            .SetImageHeight(100)
+                                            .SetImageAdaptionWidth(IMAGE_ADAPTION_WIDTH_FALSE)
+                                            .SetImageAdaptionHeight(IMAGE_ADAPTION_HEIGHT_FALSE)
+                                            .SetImageMargin(0)
+                                            .SetImageAlign(IMAGE_ALIGN_CENTER)
+                                            .SetImageFile("logo.png")
+                                            .addComponent(),
+                },[&NewButton , &newReactiveText , &NewInput , &newDelaytool]() -> Widget*{
                     NewButton
-                        .SetButtonLabel("Click me")
-                        .SetButtonAdaption(BUTTON_ADAPTION_WIDTH_FALSE, 
-                            BUTTON_ADAPTION_HEIGHT_FALSE)
-                            .SetButtonAlign(BUTTON_ALIGN_CENTER)
-                            .SetButtonStyle("default-button")
-                            .SetButtonMargin(10)
-                            .UserClick(true)
-                            .Click([&newReactiveText]{
-                                newReactiveText.ReactiveText("hai");
-                            });
-                            return NewButton.addComponent();
+                        .SetButtonWidth(100)
+                        .SetButtonHeight(40)
+                        .SetButtonAdaption(BUTTON_ADAPTION_WIDTH_FALSE,BUTTON_ADAPTION_HEIGHT_FALSE)
+                        .SetButtonAlign(BUTTON_ALIGN_CENTER)
+                        .SetButtonLabel("sumibt")
+                        .UserClick(true)
+                        .Click([&newReactiveText,&NewInput,&newDelaytool]{
+                            if (NewInput.GetInputStr().empty()) {
+                                newReactiveText
+                                    .ReactiveText("请输入名字!");
+                                    newDelaytool.setTimeoutCallBack_ui([]{
+                                        std::cout << "hai" << std::endl;
+                                    }, 1000);
+                                    return;
+                            }
+                            newReactiveText
+                            .ReactiveText("原来你叫" + NewInput.GetInputStr());
+                        });
+                        return NewButton.addComponent();
                 });
         })
-        .start();
+        .start();   
+        return 0;
 }

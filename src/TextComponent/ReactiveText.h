@@ -13,7 +13,7 @@ namespace VisualUI {
         Gtk::Label* ComponentLabel;
         public:
             ReactiveComponentText()
-            :_label(std::make_shared<std::string>("text")) , _style("default-dark-text") , _CacheStyle("") ,
+            :_label(std::make_shared<std::string>("text")) , _style("default-text") , _CacheStyle("") ,
              ComponentLabel(nullptr){}
             ReactiveComponentText(const ReactiveComponentText&) = delete;
             ReactiveComponentText(ReactiveComponentText&&) = default;

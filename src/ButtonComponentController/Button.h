@@ -32,7 +32,7 @@ namespace VisualUI {
 
         public:
         ButtonComponent():_buttonlabel("button"),
-        _style("default-dark-button"),_width(-1),
+        _style("default-button"),_width(-1),
         _height(-1) , _margin(1) , _adaption_width(true),
         _adaption_height(true) , _align(1) , _click(false) {}
 

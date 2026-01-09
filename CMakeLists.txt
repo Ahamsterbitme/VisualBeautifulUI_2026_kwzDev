@@ -23,12 +23,14 @@ pkg_check_modules(PANGOMM REQUIRED pangomm-2.48)
 
 add_executable(${PROJECT_NAME}
     test/main.cpp
-    ../src/ApplicationController/Application.h
     ../src/LayoutComponentController/LayoutBlockComponentController.h
     ../src/LayoutComponentController/LayoutFlexComponentController.h
+    ../src/ApplicationController/Application.h
     ../src/ButtonComponentController/Button.h
+    ../src/ImagesComponent/ImageComponent.h
     ../src/TextComponent/ReactiveText.h
     ../src/TextComponent/HtmlText.h
+    ../src/utils/DelayExecutor.h
     ../src/TextComponent/Text.h
 )
 

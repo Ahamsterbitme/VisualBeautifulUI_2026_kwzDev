@@ -2,6 +2,7 @@
     static auto _##name##_ptr = std::make_shared<type>();\
     auto& name = *_##name##_ptr;\
     auto name##Ptr = _##name##_ptr;
+#pragma once
 #include <gtkmm/application.h>
 #include "glibmm/refptr.h"
 #include "gtkmm/object.h"
@@ -15,11 +16,32 @@ namespace VisualUI {
     //this user assets file path
     class assets_path {
         public:
-        static inline std::string rootPath = "../assets/";
+        static inline std::string rootPath = "../../assets";
+        static inline std::string userThemePath = "/user/theme/";
         static inline std::string picturePath = rootPath + "/picture/";
         static inline std::string videoPath = rootPath + "/video/";
         static inline std::string audioPath = rootPath + "/audio/";
-        static inline std::string stylePath = rootPath + "/css/";
+        static inline std::string stylePath = "../../src/theme/css/";
+
+        inline std::string get_picture_path(){
+            return picturePath;
+        }
+
+        inline std::string get_video_path(){
+            return videoPath;
+        }
+
+        inline std::string get_audio_path(){
+            return audioPath;
+        }
+
+        inline std::string get_css_path(){
+            return stylePath;
+        }
+
+        inline std::string get_user_css_path(){
+            return userThemePath;
+        }
     };
 
     inline std::vector<Gtk::Widget*> ElementsLists (const std::vector<Gtk::Widget*> WidgetList){
@@ -38,6 +60,7 @@ namespace VisualUI {
         int window_width;
         int window_height;
         //this is gtkmm windows and app creat
+        Gtk::Window* UserWindow = nullptr;
         Glib::RefPtr<Gtk::Application> UserAPP;
         std::function<Gtk::Widget*()> callBack_widget;
 
@@ -93,8 +116,9 @@ namespace VisualUI {
                 callBack_widget = _callBack_widget;
                 return *this;
             }
+
             inline void start () {
-                static auto UserWindow = Gtk::make_managed<Gtk::Window>();
+                UserWindow = Gtk::make_managed<Gtk::Window>();
                 UserWindow -> set_size_request(window_width , window_height);
                 UserWindow -> add_css_class(Window_class);
                 UserWindow -> set_title(Window_title);
@@ -113,6 +137,13 @@ namespace VisualUI {
                 });
                 UserAPP -> hold();
                 UserAPP -> run();
+            }
+            
+            inline Gtk::Window* get_window_object(){
+                if (!UserWindow){
+                    std::cout << "[ERROR] ---> not windows ! <---" << std::endl;
+                }
+                return UserWindow;
             }
     };
 }

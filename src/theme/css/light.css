@@ -1,0 +1,10 @@
+text.default-text {
+    color: black;
+    font-weight: bold;
+}
+
+button.default-button{
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 5px 3px rgb(162, 162, 162);
+}
