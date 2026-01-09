@@ -8,6 +8,17 @@
 <a href="#zh-cn">中文</a>
 
 <h2>Let's Get Straight to the Point</h2>
+<ul>
+    <h3>January 9, 2026 Update</h3>
+    <li>Image Component - ImageComponent</li>
+    <li>Input Component - InputComponent</li>
+    <li>And the MAKE_COMPONENT macro</li>
+    <div>
+        I plan to completely break away from GTKmm control because it's really too difficult to use.
+        I intend to maintain two versions per year. I'll update the GTKmm-dependent version every two days,
+        and spend the remaining time entangled with Wayland to create an independent version. Let's go!
+    </div>
+</ul>
 <p>Visual BeautifUL UI is a brand new API built upon GTkmm 4.0. My previous version, Vbui, wasn't exactly a failure, but... let's say it was quite difficult to use. Let me point out a few things even I want to complain about:</p>
 <ul>
     <li>😵‍💫Unclear parameters - Functions like text("hello", 20, 20, false) were frankly laughable. I was too focused on mimicking Flutter's syntax back then and forgot what we really want is a simple, easy-to-use framework.</li>
@@ -141,7 +152,17 @@ int main () {
 <a href="#ru-RU">Русский</a>
 <a href="#zh-cn">中文</a>
 
-<h2>Сразу к делу</h2>
+<h2>Сразу к делу</h2><ul>
+    <h3>Обновление от 9 января 2026 года</h3>
+    <li>Компонент изображений - ImageComponent</li>
+    <li>Компонент ввода - InputComponent</li>
+    <li>И макрос MAKE_COMPONENT</li>
+    <div>
+        Я планирую полностью отказаться от GTKmm, потому что он действительно слишком сложен в использовании.
+        Я собираюсь поддерживать две версии в год. Я буду обновлять версию, зависящую от GTKmm, каждые два дня,
+        а оставшееся время посвящу работе с Wayland, чтобы создать независимую версию. Вперёд!
+    </div>
+</ul>
 <p>Visual BeautifUL UI - это совершенно новый API, построенный на основе GTkmm 4.0. Моя предыдущая версия, Vbui, не была полным провалом, но... скажем так, ей было довольно сложно пользоваться. Позвольте мне указать на несколько вещей, на которые даже я хочу пожаловаться:</p>
 <ul>
     <li>😵‍💫Неясные параметры - Такие функции, как text("hello", 20, 20, false), были, честно говоря, смешными. Я тогда слишком сосредоточился на имитации синтаксиса Flutter и забыл, что нам действительно нужна простая и удобная в использовании структура.</li>
@@ -279,6 +300,17 @@ int main () {
 <a href="#en">English</a>
 <a href="#ru-RU">Русский</a>
 <a href="#zh-cn">中文</a>
+
+<ul>
+    <h3>2026年1月9日更新</h3>
+    <li>图片组件 - ImageComponet</li>
+    <li>输入框组件 - InputComponent</li>
+    <li>以及 MAKE_COMPONENT宏</li>
+    <div>
+        我打算完全脱离GTkmm的控制毕竟这真的太难用了，
+        我打算一年维护两个版本我会两天一更新Gtkmm依赖版本剩下时间我会去和Wayland纠缠不清做出独立版本加油吧
+    </div>
+</ul>
 
 <h2>先说重点</h2>
 <p>Visual BeautifUL UI 基于 GTkmm 4.0 封装的全新 API , 我之前的版本
